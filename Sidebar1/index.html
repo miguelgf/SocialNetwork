@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Unbenanntes Dokument</title>
+<link rel="stylesheet" href="sidebar1.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>		
+
+</head>
+	
+<body>
+
+	<div class="grid-box">	
+	<div class="sidebar">
+		
+<!-- ####################################################### -->	
+<!-- ################## S I D E B A R ################### -->     		
+<!-- ####################################################### -->  
+	<aside>
+		<div class="sidebar">
+			
+<header>
+<img class="logo" src="logo.png" alt="My company name"/>
+</header>
+					
+	<ul>
+		<li style="transition-delay: 0;"><a href="#">Home</a></li>
+		<li style="transition-delay: 50ms;">About</li>
+		<li style="transition-delay: 100ms;">Contact</li>
+		<li style="transition-delay: 150ms;">More</li>
+	</ul>
+		</div>
+	
+	<div class="dot"></div>
+
+		
+	</aside>
+	
+	
+	<script>
+	$('aside').stop().on('click', function() {
+		$('.dot').addClass('ud_klick_dot').css('top', event.clientY).css('left', event.clientX);
+		$('aside').stop().toggleClass('aktiv_menu');
+		
+		setTimeout(function() {
+		$('.ud_klick_dot').removeClass('ud_klick_dot')	
+		}, 400)
+			
+	})
+	</script>
+
+</div>
+		
+		
+		
+	
+	 <!--Sidebar Klick/Dot Effekt && Auf/Zu -->
+	
+	
+	
+	
+	<script>
+    $('aside').stop().on('click',function(){
+      $('.dot').addClass('ud_klick_dot').css('top',event.clientY).css('left',event.clientX);
+
+      $('.grid-box').stop().toggleClass('grid-box-2');
+
+      setTimeout(function(){
+        $('.ud_klick_dot').removeClass('ud_klick_dot');
+      },400)
+    });
+  </script>	
+		
+		
+ <!-- Ende Sidebar -->       
+		
+		
+
+		
+		<!-- Hier beginnt der Header -->      
+		<div class="header"> <h1>Kopfbreich</h1>
+		
+	<!-- ################## Anmelde - Button ################### -->     		
+	<!-- ####################################################### -->     		
+			
+	<div class="anmelden">
+			
+			
+	<div id="ud_button" class="ud_button">
+	<div id="ud_inhalt">
+	<form>
+	<h3> <span id="ud_close">Close</span> Login</h3>	
+	<p>
+		<label>Name</label>
+		<input type="text" name="name">
+	</p>
+	
+	<p>
+	<label>Passwort</label>	
+	<input type="passwort" name="passwort">	
+	</p>
+		
+		
+		<p>
+		
+		<input id="senden" type="submit" name="senden" placeholder="Login">
+		
+		</p>	
+	</form>	
+	</div>
+
+		<h3 id="ud_click">Login</h3>
+		
+	</div> 
+	
+	
+	
+	<script>
+	
+	$(document).ready(function(){
+		
+		var ud_status = false;
+		
+		$('#ud_click').stop().on('click', function(){
+			$(this).fadeOut(300);
+			if(ud_status == false) {
+				$('#ud_button').addClass('ud_active_1');
+				setTimeout(function(){
+					$('#ud_button').addClass('ud_active');	
+					
+						},250);
+				ud_status = true;
+			}
+			
+			
+		});
+	
+		
+		$('#ud_close').stop().on('click', function(){
+			if(ud_status == true) {
+				$('#ud_button').removeClass('ud_active');
+				$('#ud_click').fadeIn(300);
+				setTimeout(function(){
+					$('#ud_button').removeClass('ud_active_1');	
+					
+						},250);
+				ud_status = false;
+			}
+			
+			
+		});
+		
+
+	});
+	</script>
+	
+			
+			
+			</div>
+		
+		
+		</div>
+		
+		
+
+		
+		<!-- ####################################################### -->	
+		<!-- ################## Main - und Content #################-->     		
+		<!-- ###################################################### -->  
+
+		
+		
+		
+		
+		<main class="main">
+	
+			<div class="wrapper">
+	
+							<div class="element1 grid-box-main">1</div>
+							<div class="element2 grid-box-main">2</div>
+							<div class="element3 grid-box-main">3</div>
+							<div class="element4 grid-box-main">4</div>
+							<div class="element5 grid-box-main">5</div>
+							<div class="element6 grid-box-main">6</div>
+							<div class="element7 grid-box-main">7</div>
+							<div class="element8 grid-box-main">8</div>
+							<div class="element9 grid-box-main">9</div>
+							<div class="element10 grid-box-main">10</div>
+			</div>
+</main>
+
+		
+		
+		
+		
+		
+		
+		
+        <div class="footer"><h1>Footer</h1></div>
+    
+	
+	
+	
+	</div>
+	
+</body>
+</html>
